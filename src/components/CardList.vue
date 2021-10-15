@@ -15,9 +15,18 @@ import Card from "./Card.vue";
 
 export default {
   components: { Card },
+  props: {
+    attempts: {
+      type: Number,
+      required: true,
+    },
+    cards: {
+      type: Array,
+      required: true,
+    },
+  },
   data() {
     return {
-      cards,
       card1: null,
       card2: null,
       click: true,
@@ -30,8 +39,9 @@ export default {
         this.card2 = card;
         this.flipCard(card, true);
         if (this.card1.name === this.card2.name) {
-          this.$emit("success", [this.card1, this.card2]);
+          this.$emit("success");
           this.clearSelected();
+          this.verifyWin();
         } else {
           this.stopClick();
           this.$emit("fail");
@@ -67,6 +77,10 @@ export default {
         this.click = true;
       }, 1500);
     },
+    verifyWin() {
+      const win = this.cards.filter((card) => card.flipped);
+      if (win.length === 30) return this.$emit("endGame");
+    },
   },
 };
 </script>
@@ -75,10 +89,10 @@ export default {
 .cards {
   display: flex;
   width: 100%;
-  height: 85%;
+  height: 100%;
   flex-wrap: wrap;
   align-items: center;
-  padding-top: 7.5%;
+  padding-top: 7.3%;
   justify-content: space-around;
 }
 </style>

@@ -29,8 +29,8 @@ export default {
 
 <style scoped>
 .card {
-  width: 9.6%;
-  height: 31%;
+  width: 9.5%;
+  height: 30%;
   background-size: contain;
   background-position: center;
 }
@@ -38,7 +38,7 @@ export default {
 .card:hover {
   cursor: pointer;
   opacity: 0.6;
-  box-shadow: 2px 2px white;
+  box-shadow: 2px 2px rgba(255, 255, 255, 0.582);
 }
 
 .flip-enter-active {

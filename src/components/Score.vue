@@ -36,13 +36,13 @@ export default {
 
 <style scoped>
 .score {
-  width: 100%;
-  height: 15%;
+  width: 100vw;
+  height: 15vh;
   display: flex;
   background-image: url("../assets/header.jpg");
-  position: fixed;
+  background-size: cover;
+  position: absolute;
   top: 0;
-  justify-content: left;
 }
 
 .box {
@@ -55,15 +55,18 @@ export default {
 
 .box h3 {
   color: white;
+  font-size: 3vh;
 }
 
 .avatar {
-  width: 70px;
-  height: 70px;
+  width: 6%;
+  height: 80%;
   border-radius: 50%;
-  background-position: center;
-  background-size: cover;
   margin-right: 3%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: white;
 }
 
 .daenerys {
@@ -74,16 +77,16 @@ export default {
   background-image: url("../assets/john-snow.webp");
 }
 .scorePoints {
-  position: fixed;
-  left: 300px;
+  position: absolute;
+  right: 37%;
   color: goldenrod;
-  margin-left: 40%;
+  font-size: 6vh;
 }
 
 .attempts {
-  position: fixed;
-  left: 400px;
+  position: absolute;
+  right: 30%;
   color: red;
-  margin-left: 40%;
+  font-size: 6vh;
 }
 </style>
