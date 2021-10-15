@@ -10,7 +10,6 @@
 </template>
 
 <script>
-import cards from "../utils/cards";
 import Card from "./Card.vue";
 
 export default {
