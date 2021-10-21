@@ -57,8 +57,9 @@ export default {
       this.user = user;
       this.play();
     },
-    success() {
-      this.points += 10;
+    success(sequence) {
+      this.attempts += sequence;
+      this.points += 10 * sequence;
     },
     fail() {
       this.attempts -= 1;

@@ -54,9 +54,9 @@ export default {
 }
 
 .avatar {
-  width: 6%;
-  height: 80%;
-  margin-right: 3%;
+  width: 8%;
+  height: 95%;
+  margin-right: 1%;
 }
 
 .avatar img {

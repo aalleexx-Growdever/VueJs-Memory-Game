@@ -29,6 +29,7 @@ export default {
       card1: null,
       card2: null,
       click: true,
+      sequence: 0,
     };
   },
   methods: {
@@ -38,11 +39,13 @@ export default {
         this.card2 = card;
         this.flipCard(card, true);
         if (this.card1.name === this.card2.name) {
-          this.$emit("success");
+          this.sequence += 1;
+          this.$emit("success", this.sequence);
           this.clearSelected();
           this.verifyWin();
         } else {
           this.stopClick();
+          this.sequence = 0;
           this.$emit("fail");
           this.flipCard(this.card1, false);
           this.flipCard(this.card2, false);
