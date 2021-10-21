@@ -20,6 +20,7 @@
       <EndGame
         v-if="endGame"
         @newGame="newGame"
+        @playAgain="play"
         :user="user"
         :points="points"
         :attempts="attempts"
@@ -54,7 +55,7 @@ export default {
   methods: {
     startGame(user) {
       this.user = user;
-      this.newGame();
+      this.play();
     },
     success() {
       this.points += 10;
@@ -64,12 +65,12 @@ export default {
       if (this.attempts === 0) return this.setEndGame;
     },
     setEndGame() {
+      this.unflipCards(cardArray);
       setTimeout(() => {
         this.cards = false;
       }, 1000);
       setTimeout(() => {
         this.endGame = true;
-        this.unflipCards(cardArray);
       }, 3500);
     },
     shuffleArray(arr) {
@@ -84,7 +85,7 @@ export default {
         card.flipped = false;
       });
     },
-    newGame() {
+    play() {
       this.login = false;
       this.endGame = false;
       this.score = false;
@@ -94,6 +95,16 @@ export default {
         this.attempts = 10;
         this.score = true;
         this.cards = true;
+      }, 2000);
+    },
+    newGame() {
+      this.endGame = false;
+      this.score = false;
+      this.list = this.shuffleArray(cardArray);
+      setTimeout(() => {
+        this.points = 0;
+        this.attempts = 10;
+        this.login = true;
       }, 2000);
     },
   },
@@ -121,11 +132,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   height: 100vh;
-  background: radial-gradient(
-    circle,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(122, 100, 100, 1) 50%,
-    rgba(0, 0, 0, 1) 100%
+  background: linear-gradient(
+    0deg,
+    rgba(125, 59, 59, 1) 0%,
+    rgba(218, 191, 132, 1) 100%
   );
   display: flex;
   flex-direction: column;

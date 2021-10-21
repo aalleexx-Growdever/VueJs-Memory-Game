@@ -87,11 +87,11 @@ export default {
 <style scoped>
 .cards {
   display: flex;
-  width: 100%;
-  height: 100%;
+  width: 99%;
+  height: 80%;
   flex-wrap: wrap;
   align-items: center;
-  padding-top: 7.3%;
+  margin-top: 8%;
   justify-content: space-around;
 }
 </style>

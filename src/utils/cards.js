@@ -1,19 +1,19 @@
-import back from "../assets/backCard.jpg";
-import card1 from "../assets/card1.jpg";
+import back from "../assets/cardback.jpg";
+import card1 from "../assets/card1.jpeg";
 import card2 from "../assets/card2.jpeg";
-import card3 from "../assets/card3.webp";
-import card4 from "../assets/card4.jpg";
-import card5 from "../assets/card5.jpg";
-import card6 from "../assets/card6.jpg";
-import card7 from "../assets/card7.jpg";
-import card8 from "../assets/card8.jpg";
-import card9 from "../assets/card9.jpg";
-import card10 from "../assets/card10.jpg";
-import card11 from "../assets/card11.jpg";
-import card12 from "../assets/card12.jpg";
-import card13 from "../assets/card13.jpg";
-import card14 from "../assets/card14.jpg";
-import card15 from "../assets/card15.jpg";
+import card3 from "../assets/card3.jpeg";
+import card4 from "../assets/card4.jpeg";
+import card5 from "../assets/card5.jpeg";
+import card6 from "../assets/card6.jpeg";
+import card7 from "../assets/card7.jpeg";
+import card8 from "../assets/card8.jpeg";
+import card9 from "../assets/card9.jpeg";
+import card10 from "../assets/card10.jpeg";
+import card11 from "../assets/card11.jpeg";
+import card12 from "../assets/card12.jpeg";
+import card13 from "../assets/card13.jpeg";
+import card14 from "../assets/card14.jpeg";
+import card15 from "../assets/card15.jpeg";
 
 export default [
   {

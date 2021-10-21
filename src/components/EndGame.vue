@@ -11,7 +11,8 @@
       <p v-if="winner">Que tal tentar bater teus pontos em um novo jogo?</p>
     </div>
     <div class="btnBox">
-      <button class="btn" @click="newGame">Bora jogar!!!</button>
+      <button class="btn" @click="playAgain">Bora jogar!!!</button>
+      <button class="btn" @click="newGame">Começar do zero</button>
     </div>
   </div>
 </template>
@@ -36,6 +37,9 @@ export default {
     newGame() {
       this.$emit("newGame");
     },
+    playAgain() {
+      this.$emit("playAgain");
+    },
   },
   computed: {
     winner() {
@@ -51,7 +55,6 @@ export default {
   width: 100%;
   height: 100%;
   margin-top: 7%;
-  background-image: url("../assets/endgame.jpg");
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -69,23 +72,28 @@ export default {
 
 .text p {
   font-size: 5vh;
-  color: white;
+  color: black;
 }
 
 .btnBox {
   width: 40%;
-  height: 30%;
+  height: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .btn {
   font-size: 3vh;
   border-radius: 10px;
   padding: 0.5% 2%;
-  background-color: indigo;
+  background-color: black;
   color: white;
+}
+
+.btn:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
 </style>

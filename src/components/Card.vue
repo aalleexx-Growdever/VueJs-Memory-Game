@@ -29,19 +29,27 @@ export default {
 
 <style scoped>
 .card {
-  width: 9.5%;
+  width: 9.2%;
   height: 30%;
-  background-size: contain;
-  background-position: center;
+  border-radius: 10px;
+}
+
+.card img {
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .card:hover {
   cursor: pointer;
-  opacity: 0.6;
-  box-shadow: 2px 2px rgba(255, 255, 255, 0.582);
+  opacity: 0.8;
+  box-shadow: 4px 4px rgb(0, 0, 0);
 }
 
 .flip-enter-active {
+  transition: all 0.8s ease-in-out;
+}
+
+.flip-leave-active {
   transition: all 0.8s ease-in-out;
 }
 
