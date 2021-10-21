@@ -65,13 +65,15 @@ export default {
       if (this.attempts === 0) return this.setEndGame;
     },
     setEndGame() {
-      this.unflipCards(cardArray);
       setTimeout(() => {
-        this.cards = false;
+        this.unflipCards(cardArray);
       }, 1000);
       setTimeout(() => {
+        this.cards = false;
+      }, 2000);
+      setTimeout(() => {
         this.endGame = true;
-      }, 3500);
+      }, 4000);
     },
     shuffleArray(arr) {
       for (let i = arr.length - 1; i > 0; i--) {
